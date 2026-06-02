@@ -1,0 +1,11 @@
+# Script Python di lavoro
+_*.py
+
+# File di sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.code-workspace

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Dott. Remo Accorona</title>
+<meta name="robots" content="noindex, follow">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0e1f38; --navy-mid: #16305a; --gold: #b89a5e; --gold-light: #d4b87a;
+    --cream: #f7f3ee; --cream-dark: #ede7de; --text: #2c2c2c; --text-light: #6b6b6b; --white: #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+  a:focus, button:focus { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+  /* NAV */
+
+  /* PAGE CONTENT */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); padding: 140px 60px 80px; }
+  .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--white); font-weight: 300; margin-bottom: 12px; }
+  .page-hero h1 em { color: var(--gold); font-style: italic; }
+  .page-hero p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+
+  /* CONTENT */
+  .page-content { max-width: 860px; margin: 0 auto; padding: 80px 60px; }
+  .page-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; color: var(--navy); margin: 48px 0 16px; border-bottom: 1px solid var(--cream-dark); padding-bottom: 8px; }
+  .page-content h2:first-child { margin-top: 0; }
+  .page-content h3 { font-size: 1rem; font-weight: 500; color: var(--navy); margin: 24px 0 8px; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.85rem; }
+  .page-content p { line-height: 1.8; color: var(--text-light); margin-bottom: 16px; font-size: 0.95rem; }
+  .page-content ul { margin: 0 0 16px 20px; }
+  .page-content ul li { line-height: 1.8; color: var(--text-light); font-size: 0.95rem; margin-bottom: 6px; }
+  .placeholder { background: #fff3cd; border: 1px dashed #e0a800; border-radius: 4px; padding: 2px 8px; font-weight: 500; color: #856404; font-size: 0.9rem; }
+  .update-date { display: inline-block; background: var(--cream); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; color: var(--text-light); margin-bottom: 32px; }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 40px; }
+  .back-link:hover { color: var(--gold-light); }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 60px; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; flex-wrap: wrap; gap: 12px; }
+  .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .page-hero { padding: 120px 24px 60px; }
+    .page-hero h1 { font-size: 2.2rem; }
+    .page-content { padding: 48px 24px; }
+    footer { padding: 40px 24px; }
+  }
+</style>
+
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:#0e1f38;color:#fff;padding:8px 16px;text-decoration:none;z-index:9999;border-radius:0 0 4px 0;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Vai al contenuto principale</a>
+<nav role="navigation" aria-label="Menu principale">
+  <div class="nav-logo">Dott. Remo <span>Accorona</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html#chi-sono">Chi sono</a></li>
+    <li><a href="index.html#curriculum">Curriculum</a></li>
+    <li><a href="index.html#specializzazioni">Specializzazioni</a></li>
+    <li><a href="index.html#patologie">Patologie</a></li>
+    <li><a href="index.html#visite">Visite ed Esami</a></li>
+    <li><a href="index.html#interventi">Interventi</a></li>
+    <li><a href="index.html#ambulatorio">Ambulatorio</a></li>
+    <li><a href="index.html#prenota" class="nav-cta">Prenota visita</a></li>
+  </ul>
+  <button id="theme-toggle" aria-label="Attiva alto contrasto" title="Alto contrasto">&#9680;</button>
+  <button class="nav-hamburger" aria-label="Apri menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main id="main-content">
+  <div class="page-hero">
+    <h1>Privacy <em>Policy</em></h1>
+    <p>Informativa sul trattamento dei dati personali ai sensi del Reg. UE 2016/679 (GDPR)</p>
+  </div>
+
+  <div class="page-content">
+    <a href="index.html" class="back-link">← Torna alla home</a>
+    <span class="update-date">Ultimo aggiornamento: 15 marzo 2026</span>
+
+    <h2>1. Titolare del trattamento</h2>
+    <p>Il Titolare del trattamento dei dati personali è:</p>
+    <p>
+      <strong>Dott. Remo Accorona</strong><br>
+      Medico Chirurgo — Specialista in Otorinolaringoiatria<br>
+      Piazza Ospedale Maggiore 3, 20162 Milano<br>
+      P.IVA: 00000000000<br>
+      Email: <a href="mailto:info@accorona-orl.it">info@accorona-orl.it</a>
+    </p>
+
+    <h2>2. Dati raccolti</h2>
+    <p>Il presente sito web ha scopo puramente informativo. <strong>Non raccoglie dati personali tramite form online</strong>. I dati personali potranno essere trattati solo nel caso in cui l'utente contatti direttamente il medico tramite:</p>
+    <ul>
+      <li>Telefono: i dati forniti durante la chiamata</li>
+      <li>Email: nome, indirizzo email e contenuto del messaggio</li>
+    </ul>
+    <p>I dati di navigazione (indirizzo IP, pagine visitate, orari) vengono raccolti automaticamente dal server di hosting per finalità tecniche e di sicurezza.</p>
+
+    <h2>3. Finalità e base giuridica del trattamento</h2>
+    <h3>Gestione della relazione con il paziente</h3>
+    <p>Base giuridica: consenso dell'interessato (art. 6 par. 1 lett. a GDPR) e necessità di eseguire misure precontrattuali (art. 6 par. 1 lett. b GDPR).</p>
+    <h3>Dati di navigazione tecnici</h3>
+    <p>Base giuridica: legittimo interesse del titolare per la sicurezza del sito (art. 6 par. 1 lett. f GDPR).</p>
+
+    <h2>4. Conservazione dei dati</h2>
+    <p>I dati forniti via email o telefono vengono conservati per il tempo strettamente necessario alla gestione della richiesta e, in caso di instaurazione di un rapporto medico-paziente, per il periodo previsto dalla normativa sanitaria vigente (min. 10 anni).</p>
+    <p>I dati di navigazione vengono conservati per un massimo di <strong>12 mesi</strong>.</p>
+
+    <h2>5. Comunicazione a terzi</h2>
+    <p>I dati personali non vengono ceduti, venduti o comunicati a terzi, salvo:</p>
+    <ul>
+      <li>Obblighi di legge o richieste dell'autorità giudiziaria</li>
+      <li>Fornitori tecnici del sito (hosting provider) nei limiti strettamente necessari</li>
+    </ul>
+
+    <h2>6. Trasferimento dati extra-UE</h2>
+    <p>Il sito utilizza Google Fonts (Google LLC, USA) per il caricamento dei caratteri tipografici. Google ha aderito al Data Privacy Framework UE-USA. Per maggiori informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+    <h2>7. Diritti dell'interessato</h2>
+    <p>Ai sensi degli artt. 15-22 GDPR, l'utente ha diritto di:</p>
+    <ul>
+      <li>Accedere ai propri dati personali</li>
+      <li>Richiedere la rettifica o la cancellazione</li>
+      <li>Opporsi al trattamento o richiederne la limitazione</li>
+      <li>Richiedere la portabilità dei dati</li>
+      <li>Revocare il consenso in qualsiasi momento</li>
+    </ul>
+    <p>Per esercitare i propri diritti scrivere a: <strong><a href="mailto:info@accorona-orl.it">info@accorona-orl.it</a></strong></p>
+    <p>È inoltre possibile proporre reclamo al Garante per la protezione dei dati personali: <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a></p>
+
+    <h2>8. Modifiche alla presente informativa</h2>
+    <p>Il Titolare si riserva il diritto di modificare la presente informativa. Le modifiche saranno pubblicate su questa pagina con aggiornamento della data in calce.</p>
+  </div>
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-bottom">
+    <div>© 2026 Dott. Remo Accorona · Tutti i diritti riservati</div>
+    <div><a href="privacy.html">Privacy Policy</a> · <a href="cookie.html">Cookie Policy</a></div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+
+<button id="back-to-top" aria-label="Torna in cima alla pagina" title="Torna in cima">&#8679;</button>
+</body>
+</html>
