@@ -344,3 +344,86 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardFlip();
   initReviewForm();
 });
+
+
+/* ══════════════════════════════════════════════
+   GOOGLE REVIEWS WIDGET
+   ── Sostituire i due valori sotto con quelli reali
+   ══════════════════════════════════════════════ */
+const GOOGLE_PLACE_ID = 'YOUR_PLACE_ID';   // ← Place ID da Google Business
+const GOOGLE_API_KEY  = 'YOUR_API_KEY';    // ← API Key da Google Cloud Console
+
+function initGoogleReviews() {
+  if (GOOGLE_PLACE_ID === 'YOUR_PLACE_ID' || GOOGLE_API_KEY === 'YOUR_API_KEY') return;
+
+  const dummy = document.createElement('div');
+  const service = new google.maps.places.PlacesService(dummy);
+
+  service.getDetails({
+    placeId: GOOGLE_PLACE_ID,
+    fields: ['rating', 'user_ratings_total', 'reviews', 'url']
+  }, (place, status) => {
+    if (status !== google.maps.places.PlacesServiceStatus.OK || !place) return;
+    _renderGoogleReviews(place);
+  });
+}
+
+function _renderGoogleReviews(place) {
+  // ── Rating bar
+  const bar = document.getElementById('g-rating-bar');
+  if (!bar) return;
+
+  document.getElementById('g-score').textContent = place.rating.toFixed(1);
+  document.getElementById('g-stars').innerHTML = _starsHtml(place.rating);
+  document.getElementById('g-count').textContent =
+    place.user_ratings_total + ' recensioni su Google';
+
+  const writeUrl = 'https://search.google.com/local/writereview?placeid=' + GOOGLE_PLACE_ID;
+  document.getElementById('g-write-btn').href = writeUrl;
+  document.getElementById('g-read-btn').href = place.url || writeUrl;
+  bar.removeAttribute('hidden');
+
+  // ── Recensioni individuali (max 5, solo ≥ 4 stelle)
+  const grid = document.getElementById('g-reviews-grid');
+  if (!grid || !place.reviews) return;
+
+  const reviews = place.reviews.filter(r => r.rating >= 4);
+  if (reviews.length === 0) return;
+
+  grid.innerHTML = reviews.map(r => `
+    <div class="g-review-card">
+      <div class="g-review-header">
+        <div class="g-reviewer-avatar">${r.author_name.charAt(0).toUpperCase()}</div>
+        <div>
+          <div class="g-reviewer-name">${_escHtml(r.author_name)}</div>
+          <div class="g-review-star">${_starsHtml(r.rating)}</div>
+        </div>
+        <div class="g-review-date">${r.relative_time_description}</div>
+      </div>
+      <p class="g-review-text">${_escHtml(r.text)}</p>
+      <div class="g-google-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Recensione verificata Google
+      </div>
+    </div>
+  `).join('');
+
+  // Nasconde le recensioni manuali se Google funziona
+  const manualGrid = document.getElementById('test-grid-manual');
+  if (manualGrid) manualGrid.style.display = 'none';
+}
+
+function _starsHtml(rating) {
+  return Array.from({length: 5}, (_, i) =>
+    `<span style="color:${i < Math.round(rating) ? 'var(--gold)' : '#ddd'}">★</span>`
+  ).join('');
+}
+
+function _escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}

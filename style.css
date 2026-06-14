@@ -189,7 +189,8 @@
   .credential-desc { font-size: 14px; line-height: 1.5; color: var(--text); }
   .credential-desc strong { display: block; font-weight: 500; color: var(--navy); margin-bottom: 2px; }
   .bio-image { position: relative; }
-  .bio-photo-frame { width: 100%; aspect-ratio: 4/5; background: linear-gradient(160deg, var(--cream-dark), var(--cream)); border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--cream-dark); position: relative; overflow: hidden; }
+  .bio-photo-frame { width: 100%; aspect-ratio: 4/5; border-radius: 4px; border: 1px solid var(--cream-dark); position: relative; overflow: hidden; }
+  .bio-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
   .bio-photo-text { text-align: center; color: var(--text-light); }
   .bio-photo-text .icon { font-size: 72px; margin-bottom: 12px; display: block; }
   .bio-accent { position: absolute; bottom: -20px; right: -20px; width: 140px; height: 140px; background: var(--gold); border-radius: 4px; z-index: -1; opacity: 0.25; }
@@ -212,7 +213,7 @@
   /* ── PATOLOGIE TRATTATE (con immagini cartoon) ── */
   #patologie { background: var(--cream); }
   .patologie-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 60px; }
-  .patologie-visita-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .patologie-visita-imgs { display: block; }
   .visita-img-wrap {
     border-radius: 12px; overflow: hidden;
     border: 2px solid var(--cream-dark);
@@ -220,6 +221,7 @@
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
   }
+  .visita-img-wrap--single img { width: 100%; height: auto; display: block; }
   .visita-img-wrap:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(14,31,56,0.15); }
   .visita-img-wrap img { width: 100%; height: 240px; object-fit: cover; display: block; }
   .visita-img-label {
@@ -276,7 +278,7 @@
   .intervento-detail::before { content: '◈'; color: var(--gold); font-size: 10px; }
 
   /* AMBULATORIO */
-  #ambulatorio { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  #ambulatorio { display: none; }
   .amb-details { margin-top: 40px; display: flex; flex-direction: column; }
   .amb-row { display: flex; gap: 24px; align-items: flex-start; padding: 22px 0; border-bottom: 1px solid var(--cream-dark); }
   .amb-row:first-child { border-top: 1px solid var(--cream-dark); }
@@ -302,10 +304,49 @@
   .amb-map-cta:hover { background: var(--gold); color: var(--navy); }
 
   /* PRENOTA */
-  #prenota { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); text-align: center; padding: 100px 60px; position: relative; overflow: hidden; }
-  #prenota::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(200,169,110,0.1) 0%, transparent 70%); }
-  #prenota .section-title { color: var(--white); }
-  #prenota .section-desc { color: rgba(255,255,255,0.6); margin: 0 auto 48px; text-align: center; }
+  #prenota {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+    padding: 100px 60px; position: relative; overflow: hidden;
+  }
+  #prenota::before { content: ''; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(200,169,110,0.07) 0%, transparent 65%); pointer-events: none; }
+  .prenota-wrap { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+  .prenota-header { text-align: center; margin-bottom: 60px; }
+  .prenota-header .section-desc { max-width: 560px; margin: 0 auto; }
+  /* Clinic cards */
+  .cliniche-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 24px; margin-bottom: 40px; }
+  .clinica-card {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(200,169,110,0.2);
+    border-radius: 16px; padding: 2rem 2.25rem;
+    display: flex; flex-direction: column; gap: 1.25rem;
+    transition: border-color 0.25s, background 0.25s;
+  }
+  .clinica-card:hover { border-color: rgba(200,169,110,0.45); background: rgba(255,255,255,0.08); }
+  .clinica-card--main { border-color: rgba(200,169,110,0.35); }
+  .clinica-tag { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+  .clinica-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: var(--white); line-height: 1.2; }
+  .clinica-address { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+  .clinica-address svg { flex-shrink: 0; color: var(--gold); opacity: 0.7; }
+  .clinica-desc { font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+  /* Schedule */
+  .clinica-schedule-title { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 0.75rem; }
+  .clinica-days { display: flex; gap: 12px; }
+  .clinica-day { background: rgba(255,255,255,0.05); border: 1px solid rgba(200,169,110,0.2); border-radius: 8px; padding: 0.6rem 1rem; text-align: center; }
+  .clinica-day span { display: block; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+  .clinica-day em { display: block; font-style: normal; font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 0.2rem; }
+  /* Segreteria */
+  .clinica-segreteria { display: flex; flex-direction: column; gap: 0.5rem; }
+  .clinica-seg-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.83rem; color: rgba(255,255,255,0.55); }
+  .clinica-seg-row svg { color: var(--gold); opacity: 0.7; flex-shrink: 0; }
+  /* Actions */
+  .clinica-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  .clinica-tel-link { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+  .clinica-tel-link:hover { color: var(--gold-light); }
+  /* Practical strip */
+  .prenota-pratica { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; border-top: 1px solid rgba(200,169,110,0.15); padding-top: 40px; }
+  .pratica-map { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(200,169,110,0.2); min-height: 260px; }
+  .pratica-map iframe { width: 100%; height: 100%; min-height: 260px; border: none; display: block; filter: saturate(0.8) brightness(0.9); }
+  .pratica-info { display: flex; flex-direction: column; gap: 1.5rem; justify-content: center; }
+  .pratica-block-title { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
   .prenota-options { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 2; }
   .prenota-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,169,110,0.3); border-radius: 4px; padding: 36px 32px; width: 240px; transition: all 0.25s; text-decoration: none; }
   .prenota-card:hover { background: rgba(200,169,110,0.12); border-color: var(--gold); transform: translateY(-4px); }
@@ -348,7 +389,9 @@
     #hero { grid-template-columns: 1fr; padding: 100px 5vw 60px; }
     .hero-content { padding-right: 0; }
     .hero-image-col { display: none; }
-    #chi-sono, #ambulatorio { grid-template-columns: 1fr; gap: 40px; }
+    #chi-sono { grid-template-columns: 1fr; gap: 40px; }
+    .cliniche-grid, .prenota-pratica { grid-template-columns: 1fr; }
+    #prenota { padding: 70px 24px; }
     .spec-grid, .interventi-grid { grid-template-columns: 1fr; }
     .patologie-intro { grid-template-columns: 1fr; gap: 32px; }
     .patologie-list-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1174,6 +1217,59 @@
 /* ══════════════════════════════════════════
    PRENOTA — DUE PERCORSI
 ══════════════════════════════════════════ */
+.prenota-columbus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(200,169,110,0.25);
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+.prenota-columbus-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+.prenota-columbus-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--white);
+}
+.prenota-columbus-sub {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.2rem;
+}
+.prenota-columbus-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--gold-light);
+  border: 1px solid rgba(200,169,110,0.4);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.prenota-columbus-btn:hover {
+  background: rgba(200,169,110,0.12);
+  border-color: var(--gold);
+  color: var(--white);
+}
+
 .prenota-paths {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2018,6 +2114,58 @@
   padding: 100px 60px;
   background: var(--white);
   text-align: center;
+}
+
+/* ── GOOGLE REVIEWS WIDGET ── */
+.g-rating-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem; flex-wrap: wrap;
+  background: var(--cream); border: 1px solid var(--cream-dark);
+  border-radius: 12px; padding: 1.5rem 2rem;
+  margin: 2rem 0 2.5rem; text-align: left;
+}
+.g-rating-summary { display: flex; align-items: center; gap: 1rem; }
+.g-score-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem; font-weight: 300; line-height: 1;
+  color: var(--navy);
+}
+.g-score-stars { font-size: 1.3rem; color: var(--gold); margin-bottom: 0.2rem; }
+.g-score-label { font-size: 0.78rem; color: var(--text-light); letter-spacing: 0.05em; }
+.g-rating-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.g-read-all {
+  font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em;
+  color: var(--gold); text-decoration: none;
+  transition: color 0.2s;
+}
+.g-read-all:hover { color: var(--navy); }
+.g-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem; margin-bottom: 2rem; text-align: left;
+}
+.g-review-card {
+  background: var(--cream); border: 1px solid var(--cream-dark);
+  border-radius: 10px; padding: 1.25rem 1.5rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.g-review-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
+.g-review-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+.g-reviewer-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--navy); color: var(--gold-light);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.g-reviewer-name { font-size: 0.88rem; font-weight: 500; color: var(--text); }
+.g-review-star { font-size: 0.85rem; color: var(--gold); }
+.g-review-date { font-size: 0.72rem; color: var(--text-light); margin-left: auto; white-space: nowrap; }
+.g-review-text { font-size: 0.88rem; line-height: 1.7; color: var(--text-light); }
+.g-google-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.72rem; color: var(--text-muted); margin-top: 0.75rem;
+  letter-spacing: 0.04em;
 }
 .test-grid {
   display: grid;
