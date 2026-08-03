@@ -1,0 +1,83 @@
+═══════════════════════════════════════════════════
+  SITO WEB — DOTT. [NOME_MEDICO]
+  Pacchetto completo pronto per la pubblicazione
+═══════════════════════════════════════════════════
+
+FILE INCLUSI:
+─────────────
+  index.html    → Pagina principale del sito
+  privacy.html  → Privacy Policy (GDPR)
+  cookie.html   → Cookie Policy (GDPR)
+
+PRIMA DI PUBBLICARE — SOSTITUISCI I PLACEHOLDER:
+─────────────────────────────────────────────────
+Cerca nel codice i testi tra parentesi quadre e sostituiscili:
+
+  [NOME_MEDICO]          → Es: Dott. Marco Bianchi
+  [NOME_COGNOME_MEDICO]  → Es: Marco Bianchi
+  [INDIRIZZO_COMPLETO]   → Es: Via Roma 1, 20100 Milano (MI)
+  [PIVA_O_CF]            → La tua Partita IVA o Codice Fiscale
+  [EMAIL_CONTATTO]       → Es: info@drmarco.it
+  [EMAIL_PRIVACY]        → Es: privacy@drmarco.it
+  [DATA_AGGIORNAMENTO]   → Es: Gennaio 2026
+  [ANNO]                 → Es: 2026
+
+COME MODIFICARE I TESTI:
+─────────────────────────
+Apri i file .html con un editor di testo:
+  • Windows: Notepad++ (gratuito) o VS Code (gratuito)
+  • Mac: TextEdit oppure VS Code (gratuito)
+
+Cerca il testo che vuoi cambiare con CTRL+F (trova)
+Modifica e salva.
+
+COME PUBBLICARE ONLINE:
+────────────────────────
+1. Registra un dominio su Aruba o Namecheap (~12€/anno)
+2. Vai su https://app.netlify.com/drop
+3. Trascina la cartella con i 3 file
+4. Collega il dominio dalle impostazioni Netlify
+
+STRUTTURA CONSIGLIATA CARTELLA:
+────────────────────────────────
+  sito-medico/
+  ├── index.html
+  ├── privacy.html
+  └── cookie.html
+
+CONTATTI PER MODIFICHE AVANZATE:
+──────────────────────────────────
+Per modifiche al design o nuove sezioni
+puoi chiedere supporto a Claude (claude.ai)
+caricando il file index.html e descrivendo
+la modifica desiderata.
+
+═══════════════════════════════════════════════════
+RICHIESTE DA FARE:
+lui visita anchE in un altra clinica, columbus, dobbiaom collegargli otlre il tasto prenota, il main ovvio rimane niguarda ma il medico punta anche a poter avere paziendi da quel punto 
+https://prenotazioni.columbus3c.com/?_gl=1*2cphyy*_gcl_au*MjExMDMzODcwMC4xNzgxMTExMjk0#BookingByHealthcareProfessional/2?id=2FDE580E-B4AF-A0B7-C17F-9649FF7AD2C1
+
+- Eliminazione sezione esami perche e troppo specializzata, basta il tasto prenota.
+
+
+
+
+___________________________________________________
+
+TO DO:
+Place ID e API Key, basta aprire script.js e modificare le due righe in cima al blocco Google Reviews:
+
+
+const GOOGLE_PLACE_ID = 'YOUR_PLACE_ID';  // ← qui
+const GOOGLE_API_KEY  = 'YOUR_API_KEY';   // ← qui
+Come ottenere l'API Key (5 minuti):
+
+Vai su console.cloud.google.com
+Crea un progetto → "API e Servizi" → "Abilita API"
+Cerca e abilita "Maps JavaScript API" + "Places API"
+"Credenziali" → "Crea credenziale" → API Key
+Restringi la chiave al dominio del sito (sicurezza)
+Comportamento del widget:
+
+Se Google funziona → mostra rating + 5 recensioni reali, nasconde quelle manuali
+Se API non configurata o errore → mostra le recensioni manuali come fallback (mai sito vuoto)

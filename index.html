@@ -59,7 +59,9 @@
 <!-- NAV -->
 <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:#0e1f38;color:#fff;padding:8px 16px;text-decoration:none;z-index:9999;border-radius:0 0 4px 0;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Vai al contenuto principale</a>
 <nav role="navigation" aria-label="Menu principale">
-  <div class="nav-logo">Dott. Remo <span>Accorona</span></div>
+  <a href="#main-content" class="nav-logo">
+    <img src="img/Loghi/Logo%20Accorona/IMG_1808.jpeg" alt="Dott. Remo Accorona" class="nav-logo-img">
+  </a>
   <ul class="nav-links">
     <li><a href="#chi-sono">Chi sono</a></li>
     <li><a href="#curriculum">Curriculum</a></li>
@@ -95,7 +97,7 @@
       Specialista in chirurgia oncologica testa-collo, rinologia e chirurgia endoscopica della base cranica.
     </p>
     <div class="hero-actions">
-      <a href="img/MainFoto.jpg" target="_blank" class="btn-primary" rel="noopener noreferrer">
+      <a href="img/Header/MainFoto.jpg" target="_blank" class="btn-primary" rel="noopener noreferrer">
         Prenota Visita Privata →
       </a>
       
@@ -103,7 +105,7 @@
   </div>
   <div class="hero-image-col">
     <div class="hero-image-frame">
-      <img src="img/MainFoto.jpg" alt="Dott. Remo Accorona — Otorinolaringoiatra Niguarda Milano">
+      <img src="img/Header/MainFoto.jpg" alt="Dott. Remo Accorona — Otorinolaringoiatra Niguarda Milano">
       <div class="hero-badge">
         <strong>Ospedale Niguarda</strong>
         Milano · Dal 2022
@@ -139,7 +141,7 @@
   </div>
   <div class="bio-image reveal">
     <div class="bio-photo-frame">
-      <img src="img/Foto.jpg" alt="Dott. Remo Accorona — Otorinolaringoiatra Niguarda Milano">  
+      <img src="img/Header/MainFoto.jpg" alt="Dott. Remo Accorona — Otorinolaringoiatra Niguarda Milano">  
   </div>
     <div class="bio-accent"></div>
   </div>
@@ -266,40 +268,17 @@
     <p class="section-desc">Valutazione, diagnosi e trattamento in tutte le aree della specialità otorinolaringoiatrica, con approccio personalizzato per ogni fascia d'età.</p>
   </div>
   <div class="spec-grid">
-   
-     <div class="spec-card reveal" role="button" tabindex="0" aria-label="Oncologia Testa-Collo — clicca per FAQ">
-      <div class="spec-card-inner">
-        <div class="spec-card-front">
-       
-          <h3 class="spec-name">Oncologia Testa-Collo</h3>
-          <p class="spec-desc">Diagnosi precoce e gestione delle neoplasie della testa e del collo, in un percorso integrato con oncologi e radioterapisti del Niguarda.</p>
-          <div class="spec-flip-hint">FAQ &#8635;</div>
-        </div>
-        <div class="spec-card-back">
-          <h3 class="faq-title">FAQ &mdash; Oncologia Testa-Collo</h3>
-          <div class="faq-item">
-            <p class="faq-q">&#10067; Quali sintomi richiedono visita urgente?</p>
-            <p class="faq-a">Raucedine persistente, disfagia, nodulo al collo &gt; 3 settimane o ulcere orali che non guariscono.</p>
-          </div>
-          <div class="faq-item">
-            <p class="faq-q">&#10067; Come avviene la prima valutazione?</p>
-            <p class="faq-a">Visita clinica con endoscopia flessibile, seguita da ecografia e biopsia se necessario.</p>
-          </div>
-          <div class="faq-item">
-            <p class="faq-q">&#10067; Si lavora in team multidisciplinare?</p>
-            <p class="faq-a">S&igrave;, al Niguarda collaboro con oncologi, radioterapisti e chirurghi maxillofacciali.</p>
-          </div>
-          <a href="#prenota" class="faq-cta-link" onclick="event.stopPropagation()">Prenota &#8594;</a>
-          <button class="faq-close" onclick="event.stopPropagation();this.closest('.spec-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
-        </div>
-      </div>
-    </div>
+
+    <!-- 1. NASO E SENI PARANASALI -->
     <div class="spec-card reveal" role="button" tabindex="0" aria-label="Naso e Seni Paranasali — clicca per FAQ">
       <div class="spec-card-inner">
         <div class="spec-card-front">
-          <h3 class="spec-name">Naso e Seni Paranasali</h3>
-          <p class="spec-desc">Trattamento delle affezioni nasali acute e croniche, incluse le patologie funzionali e strutturali del naso e dei seni paranasali.</p>
-          <div class="spec-flip-hint">FAQ &#8635;</div>
+          <img class="spec-card-img" src="img/Aree%20Di%20Specializzazione/IMG_1800.PNG" alt="Anatomia naso e seni paranasali" loading="lazy">
+          <div class="spec-card-content">
+            <h3 class="spec-name">Naso e Seni Paranasali</h3>
+            <p class="spec-desc">Diagnosi e cura delle principali problematiche nasali e sinusali, sia dal punto di vista funzionale che infiammatorio. L&rsquo;obiettivo &egrave; ripristinare una corretta respirazione e migliorare la qualit&agrave; di vita del paziente.</p>
+            <div class="spec-flip-hint">FAQ &#8635;</div>
+          </div>
         </div>
         <div class="spec-card-back">
           <h3 class="faq-title">FAQ &mdash; Naso e Seni Paranasali</h3>
@@ -320,16 +299,51 @@
         </div>
       </div>
     </div>
-    <div class="spec-card reveal" role="button" tabindex="0" aria-label="Collo e Tiroide — clicca per FAQ">
+
+    <!-- 2. ONCOLOGIA TESTA-COLLO -->
+    <div class="spec-card reveal" role="button" tabindex="0" aria-label="Oncologia Testa-Collo — clicca per FAQ">
       <div class="spec-card-inner">
         <div class="spec-card-front">
-          
-          <h3 class="spec-name">Collo e Tiroide</h3>
-          <p class="spec-desc">Valutazione e trattamento delle patologie cervicali, tiroidee e delle ghiandole salivari, in collaborazione con l&rsquo;equipe multidisciplinare del Niguarda.</p>
-          <div class="spec-flip-hint">FAQ &#8635;</div>
+          <img class="spec-card-img" src="img/Aree%20Di%20Specializzazione/IMG_1803.PNG" alt="Anatomia oncologia testa-collo" loading="lazy">
+          <div class="spec-card-content">
+            <h3 class="spec-name">Oncologia Testa-Collo</h3>
+            <p class="spec-desc">Diagnosi precoce e trattamento chirurgico delle neoplasie del distretto testa-collo: faringe, laringe, cavo orale, tiroide e ghiandole salivari. Percorso integrato con il Gruppo Multidisciplinare del Niguarda, in collaborazione con oncologi, radioterapisti e chirurghi maxillo-facciali.</p>
+            <div class="spec-flip-hint">FAQ &#8635;</div>
+          </div>
         </div>
         <div class="spec-card-back">
-          <h3 class="faq-title">FAQ &mdash; Collo e Tiroide</h3>
+          <h3 class="faq-title">FAQ &mdash; Oncologia Testa-Collo</h3>
+          <div class="faq-item">
+            <p class="faq-q">&#10067; Quali sintomi richiedono visita urgente?</p>
+            <p class="faq-a">Raucedine persistente, disfagia, nodulo al collo &gt; 3 settimane o ulcere orali che non guariscono.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">&#10067; Come avviene la prima valutazione?</p>
+            <p class="faq-a">Visita clinica con endoscopia flessibile, seguita da ecografia e biopsia se necessario.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">&#10067; Si lavora in team multidisciplinare?</p>
+            <p class="faq-a">S&igrave;, al Niguarda collaboro con oncologi, radioterapisti e chirurghi maxillofacciali.</p>
+          </div>
+          <a href="#prenota" class="faq-cta-link" onclick="event.stopPropagation()">Prenota &#8594;</a>
+          <button class="faq-close" onclick="event.stopPropagation();this.closest('.spec-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. GHIANDOLE SALIVARI E TIROIDE -->
+    <div class="spec-card reveal" role="button" tabindex="0" aria-label="Ghiandole Salivari e Tiroide — clicca per FAQ">
+      <div class="spec-card-inner">
+        <div class="spec-card-front">
+          <img class="spec-card-img" src="img/Aree%20Di%20Specializzazione/IMG_1799.PNG" alt="Anatomia ghiandole salivari e tiroide" loading="lazy">
+          <div class="spec-card-content">
+            <h3 class="spec-name">Ghiandole Salivari e Tiroide</h3>
+            <p class="spec-desc">Valutazione diagnostica e chirurgia delle patologie nodulari e infiammatorie di tiroide, paratiroide e ghiandole salivari. Dalla diagnosi al follow-up, in collaborazione con il team endocrino-oncologico del Niguarda.</p>
+            <div class="spec-flip-hint">FAQ &#8635;</div>
+          </div>
+        </div>
+        <div class="spec-card-back">
+          <h3 class="faq-title">FAQ &mdash; Ghiandole Salivari e Tiroide</h3>
           <div class="faq-item">
             <p class="faq-q">&#10067; Un nodulo al collo &egrave; sempre pericoloso?</p>
             <p class="faq-a">No, la grande maggioranza &egrave; benigna. Ecografia e visita permettono una valutazione accurata.</p>
@@ -347,16 +361,20 @@
         </div>
       </div>
     </div>
-    <div class="spec-card reveal" role="button" tabindex="0" aria-label="Chirurgia Orbitaria — clicca per FAQ">
+
+    <!-- 4. DOTTI LACRIMALI E ORBITE -->
+    <div class="spec-card reveal" role="button" tabindex="0" aria-label="Dotti Lacrimali e Orbite — clicca per FAQ">
       <div class="spec-card-inner">
         <div class="spec-card-front">
-       
-          <h3 class="spec-name">Chirurgia Orbitaria</h3>
-          <p class="spec-desc">Decompressione orbitaria e del nervo ottico nell'orbitopatia di Graves-Basedow. Dacriocistorinostomia endoscopica (DCR). Centro di riferimento per l'orbitopatia tiroidea.</p>
-          <div class="spec-flip-hint">FAQ &#8635;</div>
+          <img class="spec-card-img" src="img/Aree%20Di%20Specializzazione/IMG_1802.PNG" alt="Anatomia dotti lacrimali e orbite" loading="lazy">
+          <div class="spec-card-content">
+            <h3 class="spec-name">Dotti Lacrimali e Orbite</h3>
+            <p class="spec-desc">Valutazione e gestione delle patologie infiammatorie, ostruttive e oncologiche dell&rsquo;apparato lacrimale e della cavit&agrave; orbitaria, incluse orbitopatia di Graves-Basedow ed esoftalmo. Approccio multidisciplinare mirato alla preservazione della funzionalit&agrave; oculare.</p>
+            <div class="spec-flip-hint">FAQ &#8635;</div>
+          </div>
         </div>
         <div class="spec-card-back">
-          <h3 class="faq-title">FAQ &mdash; Chirurgia Orbitaria</h3>
+          <h3 class="faq-title">FAQ &mdash; Dotti Lacrimali e Orbite</h3>
           <div class="faq-item">
             <p class="faq-q">Quando si opera l&rsquo;orbitopatia di Graves?</p>
             <p class="faq-a">Nelle forme gravi con proptosi marcata, compressione del nervo ottico o diplopia invalidante refrattaria alla terapia medica. La valutazione &egrave; multidisciplinare con endocrinologo e oculista.</p>
@@ -374,80 +392,85 @@
         </div>
       </div>
     </div>
-    <div class="spec-card reveal" role="button" tabindex="0" aria-label="ORL Pediatrica — clicca per FAQ">
+
+    <!-- 5. TONSILLE E ADENOIDI -->
+    <div class="spec-card reveal" role="button" tabindex="0" aria-label="Tonsille e Adenoidi — clicca per FAQ">
       <div class="spec-card-inner">
         <div class="spec-card-front">
-        
-          <h3 class="spec-name">ORL Pediatrica</h3>
-          <p class="spec-desc">Diagnosi e cura delle patologie otorinolaringoiatriche in et&agrave; pediatrica, con attenzione alla crescita e allo sviluppo del bambino.</p>
-          <div class="spec-flip-hint">FAQ &#8635;</div>
+          <img class="spec-card-img" src="img/Aree%20Di%20Specializzazione/IMG_1798.PNG" alt="Anatomia tonsille e adenoidi" loading="lazy">
+          <div class="spec-card-content">
+            <h3 class="spec-name">Tonsille e Adenoidi</h3>
+            <p class="spec-desc">Diagnosi e trattamento medico e chirurgico dell&rsquo;ipertrofia tonsillare e adenoidea nel bambino. Percorso di cura completo per tutte le principali problematiche ORL dell&rsquo;et&agrave; pediatrica, con attenzione alla crescita e allo sviluppo.</p>
+            <div class="spec-flip-hint">FAQ &#8635;</div>
+          </div>
         </div>
         <div class="spec-card-back">
-          <h3 class="faq-title">FAQ &mdash; ORL Pediatrica</h3>
+          <h3 class="faq-title">FAQ &mdash; Tonsille e Adenoidi</h3>
           <div class="faq-item">
             <p class="faq-q">&#10067; Da che et&agrave; si pu&ograve; fare la tonsillectomia?</p>
-            <p class="faq-a">Si valuta generalmente dopo i 3&ndash;4 anni, quando l'anestesia &egrave; pi&ugrave; sicura.</p>
+            <p class="faq-a">Si valuta generalmente dopo i 3&ndash;4 anni, quando l&rsquo;anestesia &egrave; pi&ugrave; sicura.</p>
           </div>
           <div class="faq-item">
             <p class="faq-q">&#10067; Il russamento nel bambino &egrave; normale?</p>
             <p class="faq-a">Pu&ograve; segnalare adenoidi ingrossate o OSAS pediatrica; meglio valutarlo.</p>
           </div>
           <div class="faq-item">
-            <p class="faq-q">&#10067; L'otite si cura sempre con antibiotici?</p>
-            <p class="faq-a">Non sempre. Molte otiti medie acute guariscono spontaneamente; la terapia dipende dall'et&agrave; e dalla gravit&agrave;.</p>
+            <p class="faq-q">&#10067; L&rsquo;otite si cura sempre con antibiotici?</p>
+            <p class="faq-a">Non sempre. Molte otiti medie acute guariscono spontaneamente; la terapia dipende dall&rsquo;et&agrave; e dalla gravit&agrave;.</p>
           </div>
           <a href="#prenota" class="faq-cta-link" onclick="event.stopPropagation()">Prenota &#8594;</a>
           <button class="faq-close" onclick="event.stopPropagation();this.closest('.spec-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
         </div>
       </div>
     </div>
-     <div class="spec-card reveal" role="button" tabindex="0" aria-label="Gola, Laringe e Voce — clicca per FAQ">
+
+    <!-- 6. GOLA, LARINGE E VOCE -->
+    <div class="spec-card reveal" role="button" tabindex="0" aria-label="Gola, Laringe e Voce — clicca per FAQ">
       <div class="spec-card-inner">
         <div class="spec-card-front">
-         
-          <h3 class="spec-name">Gola, Laringe e Voce</h3>
-          <p class="spec-desc">Gestione delle patologie di faringe e laringe con approccio sia medico che chirurgico, inclusa la tutela della qualit&agrave; della voce.</p>
-          <div class="spec-flip-hint">FAQ &#8635;</div>
+          <img class="spec-card-img" src="img/Aree%20Di%20Specializzazione/IMG_1805.PNG" alt="Anatomia voce e corde vocali" loading="lazy">
+          <div class="spec-card-content">
+            <h3 class="spec-name">Gola, Laringe e Voce</h3>
+            <p class="spec-desc">Diagnosi e cura delle patologie di faringe, laringe e corde vocali, con approccio sia medico che chirurgico. Valutazione foniatrica integrata per i disturbi della voce, del linguaggio e della deglutizione.</p>
+            <div class="spec-flip-hint">FAQ &#8635;</div>
+          </div>
         </div>
         <div class="spec-card-back">
           <h3 class="faq-title">FAQ &mdash; Gola, Laringe e Voce</h3>
           <div class="faq-item">
-            <p class="faq-q">&#10067; La raucedine persistente &egrave; preoccupante?</p>
-            <p class="faq-a">Raucedine oltre 2&ndash;3 settimane richiede laringoscopia urgente per escludere cause serie.</p>
+            <p class="faq-q">&#10067; Come avviene la prima valutazione?</p>
+            <p class="faq-a">Visita otorinolaringoiatrica completa con laringoscopia (endoscopia con fibre ottiche flessibili o rigide) per una visione diretta della faringe e della laringe, e se necessario, test di fonazione.</p>
           </div>
           <div class="faq-item">
-            <p class="faq-q">&#10067; Quando si decide la tonsillectomia?</p>
-            <p class="faq-a">Di solito dopo 5&ndash;7 episodi annui di tonsillite acuta, o tonsille molto ingrandite con apnee.</p>
-          </div>
-          <div class="faq-item">
-            <p class="faq-q">&#10067; Il reflusso pu&ograve; causare problemi alla gola?</p>
-            <p class="faq-a">S&igrave;: tosse cronica, voce rauca e senso di corpo estraneo sono spesso da reflusso laringofaringeo.</p>
+            <p class="faq-q">&#10067; Di cosa si occupa la foniatria?</p>
+            <p class="faq-a">La foniatria &egrave; una branca della medicina che si occupa di prevenzione, diagnosi, cura e riabilitazione dei disturbi della comunicazione, inclusi voce, parola, linguaggio e deglutizione.</p>
           </div>
           <a href="#prenota" class="faq-cta-link" onclick="event.stopPropagation()">Prenota &#8594;</a>
           <button class="faq-close" onclick="event.stopPropagation();this.closest('.spec-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
         </div>
       </div>
     </div>
-     <div class="spec-card reveal" role="button" tabindex="0" aria-label="Orecchio e Udito — clicca per FAQ">
+
+    <!-- 7. ORECCHIO E UDITO -->
+    <div class="spec-card reveal" role="button" tabindex="0" aria-label="Orecchio e Udito — clicca per FAQ">
       <div class="spec-card-inner">
         <div class="spec-card-front">
-           <h3 class="spec-name">Orecchio e Udito</h3>
-          <p class="spec-desc">Diagnosi e trattamento delle patologie dell&rsquo;orecchio esterno, medio e interno, con attenzione ai disturbi dell&rsquo;udito e dell&rsquo;equilibrio.</p>
-          <div class="spec-flip-hint">FAQ &#8635;</div>
+          <img class="spec-card-img" src="img/Aree%20Di%20Specializzazione/IMG_1801.PNG" alt="Anatomia orecchio e udito" loading="lazy">
+          <div class="spec-card-content">
+            <h3 class="spec-name">Orecchio e Udito</h3>
+            <p class="spec-desc">Diagnosi e trattamento delle patologie dell&rsquo;orecchio e dell&rsquo;udito: ipoacusia, acufeni, vertigini, otiti e disturbi dell&rsquo;equilibrio. Valutazione audiometrica e strumentale per ogni fascia d&rsquo;et&agrave;.</p>
+            <div class="spec-flip-hint">FAQ &#8635;</div>
+          </div>
         </div>
         <div class="spec-card-back">
           <h3 class="faq-title">FAQ &mdash; Orecchio e Udito</h3>
           <div class="faq-item">
-            <p class="faq-q">&#10067; Serve la ricetta per una visita ORL?</p>
-            <p class="faq-a">No, in libera professione non serve ricetta del medico curante.</p>
+            <p class="faq-q">&#10067; Quando &egrave; necessaria una visita ORL per problemi all&rsquo;orecchio?</p>
+            <p class="faq-a">&Egrave; consigliabile una visita ORL in presenza di sintomi quali calo dell&rsquo;udito (ipoacusia), sensazione di orecchio chiuso, ronzii o fischi (acufeni), vertigini, instabilit&agrave;, dolore all&rsquo;orecchio o fuoriuscita di secrezioni.</p>
           </div>
           <div class="faq-item">
-            <p class="faq-q">&#10067; Devo portare esami precedenti?</p>
-            <p class="faq-a">S&igrave;, porta audiometrie, timpanometrie o qualsiasi esame strumentale gi&agrave; eseguito.</p>
-          </div>
-          <div class="faq-item">
-            <p class="faq-q">&#10067; Quando serve un apparecchio acustico?</p>
-            <p class="faq-a">Lo valutiamo insieme dopo audiometria tonale. Non tutte le ipoacusie lo richiedono.</p>
+            <p class="faq-q">&#10067; Che cos&rsquo;&egrave; l&rsquo;ipoacusia e come si diagnostica?</p>
+            <p class="faq-a">L&rsquo;ipoacusia &egrave; una riduzione parziale o totale dell&rsquo;udito. Si diagnostica attraverso test audiometrici tonali e vocali che valutano la soglia uditiva e la capacit&agrave; di comprensione del linguaggio. Se necessario, si effettuano ulteriori esami strumentali.</p>
           </div>
           <a href="#prenota" class="faq-cta-link" onclick="event.stopPropagation()">Prenota &#8594;</a>
           <button class="faq-close" onclick="event.stopPropagation();this.closest('.spec-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
@@ -484,150 +507,80 @@
 
   <!-- Griglia patologie -->
   <div class="patologie-list-grid reveal">
-    <div class="pat-card" role="button" tabindex="0" aria-label="Acufeni">
-      <div class="pat-card-inner">
-        <div class="pat-card-front">
-          <div class="pat-icon-wrap">+</div>
-          <div class="pat-name">Acufeni / Ipoacusia</div>
-          <div class="pat-desc">Rumori o fischi percepiti senza fonte esterna, di origine cocleare o neurologica</div>
-          <div class="pat-flip-hint">FAQ &#8635;</div>
-        </div>
-        <div class="pat-card-back">
-          <div class="pat-name" style="margin-bottom:12px;">Acufeni</div>
-          <p class="faq-q" style="font-size:0.8rem;font-weight:600;margin-bottom:6px;">&#10067; Gli acufeni si guariscono?</p>
-          <p class="faq-a" style="font-size:0.8rem;line-height:1.6;">Non sempre si eliminano, ma esistono terapie (TRT, farmaci, counselling) che riducono significativamente il disturbo.</p>
-          <button class="faq-close" onclick="event.stopPropagation();this.closest('.pat-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
-        </div>
-      </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">01</div>
+      <div class="pat-name">Rinosinusite Cronica e Poliposi Nasale</div>
+      <div class="pat-desc">Infiammazione persistente dei seni paranasali con formazione di polipi che ostruiscono il respiro</div>
     </div>
-    <div class="pat-card" role="button" tabindex="0" aria-label="OSAS e Russamento">
-      <div class="pat-card-inner">
-        <div class="pat-card-front">
-          <div class="pat-icon-wrap">+</div>
-          <div class="pat-name">OSAS e Russamento</div>
-          <div class="pat-desc">Apnee ostruttive del sonno, russamento cronico e disturbi respiratori notturni</div>
-          <div class="pat-flip-hint">FAQ &#8635;</div>
-        </div>
-        <div class="pat-card-back">
-          <div class="pat-name" style="margin-bottom:12px;">OSAS e Russamento</div>
-          <p class="faq-q" style="font-size:0.8rem;font-weight:600;margin-bottom:6px;">&#10067; Si cura solo con la chirurgia?</p>
-          <p class="faq-a" style="font-size:0.8rem;line-height:1.6;">No: dipende dalla gravit&agrave;. CPAP, dispositivi orali e interventi chirurgici sono valutati insieme.</p>
-          <button class="faq-close" onclick="event.stopPropagation();this.closest('.pat-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
-        </div>
-      </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">02</div>
+      <div class="pat-name">Rinite Allergica e Rinite Atopica</div>
+      <div class="pat-desc">Infiammazione della mucosa nasale scatenata da allergeni o iperreattivit&agrave;, con naso chiuso e starnuti</div>
     </div>
-    <div class="pat-card" role="button" tabindex="0" aria-label="Rinite Allergica">
-      <div class="pat-card-inner">
-        <div class="pat-card-front">
-          <div class="pat-icon-wrap">+</div>
-          <div class="pat-name">Rinite Allergica</div>
-          <div class="pat-desc">Rinite allergica stagionale, perenne e vasomotoria con naso chiuso o che cola</div>
-          <div class="pat-flip-hint">FAQ &#8635;</div>
-        </div>
-        <div class="pat-card-back">
-          <div class="pat-name" style="margin-bottom:12px;">Rinite Allergica</div>
-          <p class="faq-q" style="font-size:0.8rem;font-weight:600;margin-bottom:6px;">&#10067; Si pu&ograve; guarire dall'allergia?</p>
-          <p class="faq-a" style="font-size:0.8rem;line-height:1.6;">Con immunoterapia specifica (vaccino) molti pazienti ottengono remissione duratura.</p>
-          <button class="faq-close" onclick="event.stopPropagation();this.closest('.pat-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
-        </div>
-      </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">03</div>
+      <div class="pat-name">Deviazione Setto e Ipertrofia Turbinati</div>
+      <div class="pat-desc">Ostruzione respiratoria cronica dovuta a setto nasale storto o turbinati ingrossati, spesso causa di russamento</div>
     </div>
-    <div class="pat-card" role="button" tabindex="0" aria-label="Vertigini">
-      <div class="pat-card-inner">
-        <div class="pat-card-front">
-          <div class="pat-icon-wrap">+</div>
-          <div class="pat-name">Vertigini</div>
-          <div class="pat-desc">Labirintite, VPPB e disturbi dell&rsquo;equilibrio con senso di giramento testa</div>
-          <div class="pat-flip-hint">FAQ &#8635;</div>
-        </div>
-        <div class="pat-card-back">
-          <div class="pat-name" style="margin-bottom:12px;">Vertigini</div>
-          <p class="faq-q" style="font-size:0.8rem;font-weight:600;margin-bottom:6px;">&#10067; Ogni vertigine &egrave; uguale?</p>
-          <p class="faq-a" style="font-size:0.8rem;line-height:1.6;">No: pu&ograve; essere di origine periferica (orecchio) o centrale. La diagnosi differenziale &egrave; fondamentale.</p>
-          <button class="faq-close" onclick="event.stopPropagation();this.closest('.pat-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
-        </div>
-      </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">04</div>
+      <div class="pat-name">Tumori Tiroidei e delle Ghiandole Salivari</div>
+      <div class="pat-desc">Neoplasie benigne o maligne della tiroide o delle ghiandole che producono saliva (come la parotide)</div>
     </div>
-    <div class="pat-card" role="button" tabindex="0" aria-label="Sinusite">
-      <div class="pat-card-inner">
-        <div class="pat-card-front">
-          <div class="pat-icon-wrap">+</div>
-          <div class="pat-name">Sinusite</div>
-          <div class="pat-desc">Infiammazione acuta e cronica dei seni paranasali con dolore facciale e congestione</div>
-          <div class="pat-flip-hint">FAQ &#8635;</div>
-        </div>
-        <div class="pat-card-back">
-          <div class="pat-name" style="margin-bottom:12px;">Sinusite</div>
-          <p class="faq-q" style="font-size:0.8rem;font-weight:600;margin-bottom:6px;">&#10067; Serve sempre l'operazione?</p>
-          <p class="faq-a" style="font-size:0.8rem;line-height:1.6;">No: si inizia con terapia medica. La chirurgia (FESS) si indica solo se la terapia medica fallisce.</p>
-          <button class="faq-close" onclick="event.stopPropagation();this.closest('.pat-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
-        </div>
-      </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">05</div>
+      <div class="pat-name">Tonsilliti e Ipertrofie Adenoidee</div>
+      <div class="pat-desc">Infezioni ricorrenti o aumento di volume di tonsille e adenoidi, con mal di gola e apnee notturne</div>
     </div>
-    <div class="pat-card" role="button" tabindex="0" aria-label="Disfonia">
-      <div class="pat-card-inner">
-        <div class="pat-card-front">
-          <div class="pat-icon-wrap">+</div>
-          <div class="pat-name">Disfonia</div>
-          <div class="pat-desc">Voce rauca, alterata o affaticata: noduli, polipi e patologie delle corde vocali</div>
-          <div class="pat-flip-hint">FAQ &#8635;</div>
-        </div>
-        <div class="pat-card-back">
-          <div class="pat-name" style="margin-bottom:12px;">Disfonia</div>
-          <p class="faq-q" style="font-size:0.8rem;font-weight:600;margin-bottom:6px;">&#10067; Quanto dura il recupero chirurgico?</p>
-          <p class="faq-a" style="font-size:0.8rem;line-height:1.6;">Solitamente 7&ndash;14 giorni di riposo vocale, poi rieducazione con logopedista.</p>
-          <button class="faq-close" onclick="event.stopPropagation();this.closest('.pat-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
-        </div>
-      </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">06</div>
+      <div class="pat-name">Tumori dei Seni Paranasali e del Cavo Orale</div>
+      <div class="pat-desc">Formazioni neoplastiche che colpiscono le cavit&agrave; nasali e le strutture della bocca (lingua, palato)</div>
     </div>
-    <div class="pat-card" role="button" tabindex="0" aria-label="Otite">
-      <div class="pat-card-inner">
-        <div class="pat-card-front">
-          <div class="pat-icon-wrap">+</div>
-          <div class="pat-name">Otite</div>
-          <div class="pat-desc">Otite esterna, media acuta, cronica e con effusione (orecchio che fa male o che si sente tappato)</div>
-          <div class="pat-flip-hint">FAQ &#8635;</div>
-        </div>
-        <div class="pat-card-back">
-          <div class="pat-name" style="margin-bottom:12px;">Otite</div>
-          <p class="faq-q" style="font-size:0.8rem;font-weight:600;margin-bottom:6px;">&#10067; L'otite &egrave; contagiosa?</p>
-          <p class="faq-a" style="font-size:0.8rem;line-height:1.6;">L'otite media in s&egrave; non &egrave; contagiosa, ma l'infezione virale che la precede pu&ograve; esserlo.</p>
-          <button class="faq-close" onclick="event.stopPropagation();this.closest('.pat-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
-        </div>
-      </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">07</div>
+      <div class="pat-name">Otiti &middot; Vertigini &middot; Acufeni e Ipoacusie</div>
+      <div class="pat-desc">Infezioni dell&rsquo;orecchio, disturbi dell&rsquo;equilibrio, ronzii e calo dell&rsquo;udito (transitorio o permanente)</div>
     </div>
-    <div class="pat-card" role="button" tabindex="0" aria-label="Tonsillite">
-      <div class="pat-card-inner">
-        <div class="pat-card-front">
-          <div class="pat-icon-wrap">+</div>
-          <div class="pat-name">Tonsillite</div>
-          <div class="pat-desc">Tonsillite batterica ricorrente, mal di gola cronico e valutazione chirurgica</div>
-          <div class="pat-flip-hint">FAQ &#8635;</div>
-        </div>
-        <div class="pat-card-back">
-          <div class="pat-name" style="margin-bottom:12px;">Tonsillite</div>
-          <p class="faq-q" style="font-size:0.8rem;font-weight:600;margin-bottom:6px;">&#10067; Tonsillectomia = niente pi&ugrave; mal di gola?</p>
-          <p class="faq-a" style="font-size:0.8rem;line-height:1.6;">Le ricorrenti tonsilliti si eliminano. Possono restare rare faringiti, ma la qualit&agrave; di vita migliora nettamente.</p>
-          <button class="faq-close" onclick="event.stopPropagation();this.closest('.pat-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
-        </div>
-      </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">08</div>
+      <div class="pat-name">Tumori Laringei</div>
+      <div class="pat-desc">Neoplasie della laringe, organo della voce e della respirazione, spesso con raucedine persistente</div>
     </div>
-    <div class="pat-card" role="button" tabindex="0" aria-label="Ipoacusia">
-      <div class="pat-card-inner">
-        <div class="pat-card-front">
-          <div class="pat-icon-wrap">+</div>
-          <div class="pat-name">Ipoacusia</div>
-          <div class="pat-desc">Riduzione dell&rsquo;udito di tipo trasmissivo, neurosensoriale o misto, in ogni et&agrave;</div>
-          <div class="pat-flip-hint">FAQ &#8635;</div>
-        </div>
-        <div class="pat-card-back">
-          <div class="pat-name" style="margin-bottom:12px;">Ipoacusia</div>
-          <p class="faq-q" style="font-size:0.8rem;font-weight:600;margin-bottom:6px;">&#10067; L'ipoacusia pu&ograve; peggiorare?</p>
-          <p class="faq-a" style="font-size:0.8rem;line-height:1.6;">Dipende dalla causa. Con diagnosi precoce e trattamento adeguato spesso si stabilizza.</p>
-          <button class="faq-close" onclick="event.stopPropagation();this.closest('.pat-card').classList.remove('flipped')" aria-label="Chiudi">&#10005;</button>
-        </div>
-      </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">09</div>
+      <div class="pat-name">HPV e Tumori Orofaringei</div>
+      <div class="pat-desc">Infezione da Papillomavirus e tumori della gola (orofaringe), condizioni distinte ma spesso correlate</div>
     </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">10</div>
+      <div class="pat-name">Dacriocistite e Orbitopatia</div>
+      <div class="pat-desc">Infezione del sacco lacrimale (con lacrimazione) e disturbi oculari legati a patologie orbitarie (es. tiroide)</div>
+    </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">11</div>
+      <div class="pat-name">Tumori Cutanei del Volto</div>
+      <div class="pat-desc">Formazioni neoplastiche della pelle localizzate sul viso, come epiteliomi e melanomi</div>
+    </div>
+
+    <div class="pat-card">
+      <div class="pat-icon-wrap">12</div>
+      <div class="pat-name">Disfonia</div>
+      <div class="pat-desc">Alterazione qualitativa o quantitativa della voce: raucedine, voce affaticata o sibilante</div>
+    </div>
+
+  </div>
 </section>
 
 
@@ -639,61 +592,72 @@
     <h2 class="section-title" style="color:var(--white);">Interventi <em>chirurgici</em></h2>
     <p class="section-desc">Il Dott. Accorona esegue interventi chirurgici presso le sale operatorie dell'Ospedale Niguarda, con particolare esperienza in chirurgia oncologica testa-collo, endoscopica e mini-invasiva.</p>
   </div>
-  <div class="interventi-grid">
-    <div class="intervento-card reveal">
-      <div class="intervento-img"></div>
-      <div class="intervento-body">
-        <div class="intervento-tag">Oncologia</div>
-        <div class="intervento-name">Chirurgia Tumori Cavo Orale</div>
-        <div class="intervento-desc">Resezione chirurgica di neoplasie del cavo orale con approccio funzionale e ricostruttivo. Trattamento multidisciplinare in team oncologico dedicato.</div>
-        <div class="intervento-detail">Oncologia testa-collo · Multidisciplinare</div>
+  <div class="interventi-grid reveal">
+
+    <div class="intervento-row">
+      <div class="i-num">01</div>
+      <div class="i-content">
+        <div class="i-name">Turbinectomia e FESS</div>
+        <div class="i-desc">Riduzione dei turbinati ipertrofici e chirurgia endoscopica funzionale dei seni paranasali per sinusite cronica, polipi nasali e ostruzione respiratoria.</div>
       </div>
     </div>
-    <div class="intervento-card reveal">
-      <div class="intervento-img"></div>
-      <div class="intervento-body">
-        <div class="intervento-tag">Laringe e faringe</div>
-        <div class="intervento-name">Chirurgia Oncologica Laringea</div>
-        <div class="intervento-desc">Trattamento chirurgico delle neoplasie laringee e faringee con tecniche di chirurgia conservativa della funzione vocale e deglutitoria.</div>
-        <div class="intervento-detail">Laser CO₂ · Preservazione funzione</div>
+
+    <div class="intervento-row">
+      <div class="i-num">02</div>
+      <div class="i-content">
+        <div class="i-name">Chirurgia Oncologica del Cavo Orale</div>
+        <div class="i-desc">Resezione di neoplasie maligne del cavo orale con approccio funzionale e ricostruttivo, in &eacute;quipe oncologica multidisciplinare dedicata.</div>
       </div>
     </div>
-    <div class="intervento-card reveal">
-      <div class="intervento-img"></div>
-      <div class="intervento-body">
-        <div class="intervento-tag">Ghiandole salivari</div>
-        <div class="intervento-name">Chirurgia delle Ghiandole Salivari</div>
-        <div class="intervento-desc">Parotidectomia, submandibulectomia e resezione di ghiandole salivari minori per patologie tumorali e non tumorali, con preservazione del nervo facciale.</div>
-        <div class="intervento-detail">Microchirurgia · Preservazione nervosa</div>
+
+    <div class="intervento-row">
+      <div class="i-num">03</div>
+      <div class="i-content">
+        <div class="i-name">Chirurgia Tiroidea e delle Ghiandole Salivari</div>
+        <div class="i-desc">Tiroidectomia totale o parziale, parotidectomia e submandibulectomia con preservazione del nervo facciale e dei nervi ricorrenti.</div>
       </div>
     </div>
-    <div class="intervento-card reveal">
-      <div class="intervento-img"></div>
-      <div class="intervento-body">
-        <div class="intervento-tag">Seni paranasali e base cranica</div>
-        <div class="intervento-name">Chirurgia Endoscopica Base Cranica</div>
-        <div class="intervento-desc">Chirurgia endoscopica avanzata della base cranica per neoplasie e patologie estese ai seni paranasali, in collaborazione con neurochirurgia.</div>
-        <div class="intervento-detail">Endoscopica · Alta precisione</div>
+
+    <div class="intervento-row">
+      <div class="i-num">04</div>
+      <div class="i-content">
+        <div class="i-name">Tonsillectomia Tradizionale e Coblator</div>
+        <div class="i-desc">Rimozione delle tonsille con tecnica fredda o Coblator a radiofrequenza per tonsilliti ricorrenti, apnee notturne e ipertrofie ostruttive.</div>
       </div>
     </div>
-    <div class="intervento-card reveal">
-      <div class="intervento-img"></div>
-      <div class="intervento-body">
-        <div class="intervento-tag">Naso e seni paranasali</div>
-        <div class="intervento-name">FESS — Chirurgia Rinosinusale Funzionale</div>
-        <div class="intervento-desc">Chirurgia endoscopica funzionale dei seni paranasali per sinusite cronica, polipi nasali, correzione del setto e turbinoplastica.</div>
-        <div class="intervento-detail">Endoscopica · Tecnica mini-invasiva</div>
+
+    <div class="intervento-row">
+      <div class="i-num">05</div>
+      <div class="i-content">
+        <div class="i-name">Dacriocistorinostomia e Orbitotomia</div>
+        <div class="i-desc">Trattamento endoscopico della dacriocistite cronica e decompressione orbitaria per oftalmopatia di Graves, in collaborazione con oculistica.</div>
       </div>
     </div>
-    <div class="intervento-card reveal">
-      <div class="intervento-img"></div>
-      <div class="intervento-body">
-        <div class="intervento-tag">Orbita</div>
-        <div class="intervento-name">Chirurgia Orbitaria (Oftalmopatia di Graves)</div>
-        <div class="intervento-desc">Decompressione orbitaria endoscopica per il trattamento dell'oftalmopatia di Graves, in collaborazione con l'équipe di oculistica del Niguarda.</div>
-        <div class="intervento-detail">In équipe multidisciplinare</div>
+
+    <div class="intervento-row">
+      <div class="i-num">06</div>
+      <div class="i-content">
+        <div class="i-name">Chirurgia Base Cranica</div>
+        <div class="i-desc">Resezione endoscopica di neoplasie e patologie estese alla base cranica, in &eacute;quipe multidisciplinare con neurochirurgia del Niguarda.</div>
       </div>
     </div>
+
+    <div class="intervento-row">
+      <div class="i-num">07</div>
+      <div class="i-content">
+        <div class="i-name">Chirurgia Robotica Transorale</div>
+        <div class="i-desc">Exeresi di tumori dell&rsquo;orofaringe con robot Da Vinci ad accesso transorale, senza incisioni esterne e con recupero funzionale accelerato.</div>
+      </div>
+    </div>
+
+    <div class="intervento-row">
+      <div class="i-num">08</div>
+      <div class="i-content">
+        <div class="i-name">Chirurgia Funzionale Laringea</div>
+        <div class="i-desc">Microchirurgia laser CO&sup2; delle corde vocali per noduli, polipi, papillomi e tumori laringei precoci con preservazione della voce.</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -916,7 +880,11 @@
     <div class="footer-disclaimer">© 2026 Dott. Remo Accorona — P.IVA 00000000000 · Iscritto all'Ordine dei Medici di Milano · Questo sito ha scopo puramente informativo e non sostituisce il consulto medico.</div>
     <div><a href="privacy.html" rel="noopener">Privacy Policy</a> &middot; <a href="cookie.html" rel="noopener">Cookie Policy</a></div>
   </div>
-  <div style="text-align:center;padding:12px 60px 20px;font-size:11px;color:rgba(255,255,255,0.22);border-top:1px solid rgba(255,255,255,0.06);margin-top:12px;">Sito realizzato da <strong style="color:rgba(255,255,255,0.38);">Kamay Studio</strong> &mdash;<strong>  +Pazienti</strong></div>
+  <div class="footer-credit">
+    <span class="footer-credit-label">Sito realizzato da</span>
+    <img src="img/Loghi/Logo%20PiuPazienti/IMG_1298.jpeg" alt="PiùPazienti" class="footer-credit-logo">
+    <span class="footer-credit-name">PiùPazienti</span>
+  </div>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>

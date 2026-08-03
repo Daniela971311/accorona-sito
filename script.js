@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════
-   DOTT. MARCO MORANDI — script.js
+   DOTT. Remo Accorona — script.js
    Nav scroll · Counter · Hamburger · Reveal
    Floating button · Active nav link
 ══════════════════════════════════════════ */
