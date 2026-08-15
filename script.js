@@ -156,17 +156,20 @@ function initSmoothScroll() {
 }
 
 /* ── THEME TOGGLE ── */
+const ICON_CONTRAST = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 8h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const ICON_CONTRAST_ON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><text x="12" y="16" text-anchor="middle" font-size="10" font-family="Arial, Helvetica, sans-serif" fill="currentColor" dy="-1">A</text></svg>';
+
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
   if (theme === 'high-contrast') {
-    btn.innerHTML = '&#9680;';
+    btn.innerHTML = ICON_CONTRAST_ON;
     btn.setAttribute('aria-label', 'Disattiva alto contrasto');
     btn.setAttribute('title', 'Disattiva alto contrasto');
     btn.classList.add('active');
   } else {
-    btn.innerHTML = '&#9680;';
+    btn.innerHTML = ICON_CONTRAST;
     btn.setAttribute('aria-label', 'Attiva alto contrasto');
     btn.setAttribute('title', 'Attiva alto contrasto');
     btn.classList.remove('active');
