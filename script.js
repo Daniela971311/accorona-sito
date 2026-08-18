@@ -304,16 +304,22 @@ function initReviewForm() {
 function initCardFlip() {
   // Spec cards
   document.querySelectorAll('.spec-card[role="button"]').forEach(card => {
-    card.addEventListener('click', () => {
-      const isFlipped = card.classList.contains('flipped');
-      // Close all other spec cards
+    function openCard() {
       document.querySelectorAll('.spec-card.flipped').forEach(c => c.classList.remove('flipped'));
-      if (!isFlipped) card.classList.add('flipped');
-    });
+      card.classList.add('flipped');
+    }
+    // Only the front face opens the card — the back face is left free for
+    // scrolling/selecting FAQ text, which used to bubble up and re-close
+    // the card on every tap (making scrolling on the back feel broken).
+    card.querySelector('.spec-card-front')?.addEventListener('click', openCard);
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        card.click();
+        if (card.classList.contains('flipped')) {
+          card.classList.remove('flipped');
+        } else {
+          openCard();
+        }
       }
     });
   });
